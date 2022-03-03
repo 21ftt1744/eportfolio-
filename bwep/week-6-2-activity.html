@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <style type="text/css">  
+
+     .sibling-element {
+        padding: 10px;
+        background-color: #f2f2f2;
+    }
+     .parent-element {
+        position: relative;
+        height: 200px;
+        padding:   10px;
+        background-color: #81adc8;
+
+    }
+    .main-element {
+        /*position: static;*/
+        /*default position, has no special effect*/
+
+        /*position: relative;*/
+        /*from where it start, move 100px left and 10px down (/relative), it will not move the document from the flow*/
+
+        /*position: absolute;*/
+        /*it will find for the position of the parent and if the parent does not have a position property, it will thwn look for the body element and start from there, if there is no position at all, it will start at the top left corner*/
+
+        /*position: fixed;*/
+        /*regardless if the parent element has a position property, it will ignore it and stay at the given position*/
+
+        /*left: 100px;
+        top: 100px;*/
+        background-color: yellow;
+        padding: 10px;
+    }
+
+    </style>
+</head>
+<body>
+ <div class="parent-element">
+            <div class="sibling-element">
+                I'm the other sibling element.
+            </div>
+            
+            <div class="main-element">
+                All eyes on me. I am the main element.
+            </div>
+            
+            <div class="sibling-element">
+                I'm the other sibling element.
+            </div>
+</div>
+</body>
+</html>
